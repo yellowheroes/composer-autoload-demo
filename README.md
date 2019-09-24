@@ -9,7 +9,7 @@ we use the following in composer.json autoload / psr-4 block:
 
 ```"yellowheroes\\test\\": "src/"```
 
-This maps to directories under ```/src/```
+This maps to any classes in folder ```/src/``` and sub-directories under ```/src/```
 
 i.e. it will successfully autoload any classes located in ```src``` or subdirectories of ```src``` folder.
 
