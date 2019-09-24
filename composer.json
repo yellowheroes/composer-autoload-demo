@@ -1,0 +1,11 @@
+{
+    "name": "yellowheroes/test",
+    "description": "testing composer autoloading minimum set-up",
+
+    "autoload": {
+        "psr-4": {
+            "yellowheroes\\test\\": "src/",
+            "yellowheroes\\test\\root\\": ""
+        }
+    }
+}
