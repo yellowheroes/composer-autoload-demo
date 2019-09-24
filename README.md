@@ -11,11 +11,20 @@ we use the following in composer.json autoload / psr-4 block:
 
 This maps to directories under ```/src/```
 
+i.e. it will successfully autoload any classes located in ```src``` or subdirectories of ```src``` folder.
+
 ## other folders (ROOT == ```""```)
-To correctly map to class ```ImNotInSrcDir``` located in ROOT, we use mapping to ```""```:
+To map to classes in directories that are not under ```src``` we need to set another psr-4 path
+in the composer.json psr-4 / autoload block.
+
+For exampole, to correctly map to class ```ImNotInSrcDir``` located in ROOT (i.e. not under ```src```), we use mapping to ```""```,
+and save the following path in the composer.json psr-4 / autoload block:
 
 ```"yellowheroes\\test\\root\\": ""```
 
 This maps to directory under ```/``` (i.e. ROOT)
 
 So: DO NOT USE ```"/"``` to set ROOT, as it would resolve to ```//``` for Composer autoloader, because it always starts at ```/```
+
+For any other directories not under ```src``` do the same, just add another line to the composer.json psr-4 / autoload block,
+mapping the namespace to the correct folder location to allow Composer autoloader to successfully include classes located there.
