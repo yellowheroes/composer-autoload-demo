@@ -1,7 +1,7 @@
 # composer-autoload-demo
 
 ## Namespace to directory mapping
-Composer mapping is always relative to ROOT, i.e.: ```"/"```.
+Composer mapping is always relative to ROOT directory, i.e.: ```"/"```.
 
 ## src folder (your project)
 To correctly map Composer autoloader to the class files under the ```src``` directory (our project),
@@ -12,7 +12,7 @@ we use the following in composer.json autoload / psr-4 block:
 This will successfully autoload any classes in base-namespace* ```"yellowheroes\test"``` located in ```src``` or subdirectories of ```src``` folder.
 
 note: base-namespace here means that the autoloader will also autoload classes in e.g. namespace ```"yellowheroes\test\config"```, we just need to import them into our base namespace.
-      e.g. class ```Config``` in folder ```src/config``` which sits in namespace ```"yellowheroes\test\config"```, is successfully imported ('use' statement) in class ```Mother``` and successfully autoloaded (see how this works in file ```Mother.php``` in folder ```src```) 
+      For example class ```Config``` in folder ```src/config``` which sits in namespace ```"yellowheroes\test\config"```, is successfully imported ('use' statement) in class ```Mother``` and successfully autoloaded (see how this works in file ```Mother.php``` in folder ```src```) 
 
 ## other folders (ROOT == ```""```)
 To map to classes in directories that are not under ```src``` we need to set another psr-4 path
