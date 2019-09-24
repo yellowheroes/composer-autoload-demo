@@ -17,7 +17,7 @@ i.e. it will successfully autoload any classes located in ```src``` or subdirect
 To map to classes in directories that are not under ```src``` we need to set another psr-4 path
 in the composer.json psr-4 / autoload block.
 
-For example, to correctly map to class ```ImNotInSrcDir```, in its namespace ```"yellowheroes\test\root"```,
+For example, to correctly map to class ```ImNotInSrcDir```, which sits in namespace ```"yellowheroes\test\root"```,
 located in the ROOT of the project (i.e. not under ```src```), we use mapping to ```""```,
 and save the following path in the composer.json psr-4 / autoload block:
 
